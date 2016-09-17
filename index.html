@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="MyApp">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="js/librerys/jquery-3.1.0.js"></script>
     <script src="js/products.js"></script>
+    <script src="js/frameworks/angular.js"></script>
 </head>
 <body>
-
+<div ng-controller="TitlesCtrl">
+    <ul ng-repeat="ProductTitle in titles">
+        <li>{{ProductTitle.title}}</li>
+    </ul>
+</div>
 </body>
+
 </html>
