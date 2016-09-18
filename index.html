@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/librerys/jquery-3.1.0.js"></script>
     <script src="js/products.js"></script>
     <script src="js/frameworks/angular.js"></script>
 </head>
 <body>
 <div ng-controller="TitlesCtrl">
-    <ul ng-repeat="ProductTitle in titles">
-        <li>{{ProductTitle.title}}</li>
+    <ul class="nav nav-list" ng-controller="navCtrl">
+        <li ng-class="navClass('{{ProductTitle.title}}')" ng-repeat="ProductTitle in titles"><a href='#/{{ProductTitle.title}}'>
+            {{ProductTitle.title}}</a>
+        </li>
     </ul>
 </div>
 </body>
