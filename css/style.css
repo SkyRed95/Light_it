@@ -1,7 +1,36 @@
+html,
+body {
+    height: 100%;
+    background-color: beige;
+    margin: 0px;
+}
+
 ul {
     list-style-type: none;
 }
 
 li {
-    cursor: pointer;
+    padding: 10px;
+}
+
+a {
+    color: darkgrey;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    transition-duration: 1s;
+}
+a:hover {
+    color: white;
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+.menu {
+    display: inline-block;
+    height: 100%;
+    background-color: black;
 }
