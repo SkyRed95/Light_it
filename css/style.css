@@ -22,7 +22,8 @@ a {
     transition-duration: 1s;
 }
 
-.nav,a {
+.nav,
+a {
     background-color: black;
     display: -webkit-box;
     margin-top: 0px;
