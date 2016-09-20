@@ -6,9 +6,6 @@ $(document).ready(function () {
         success(function(data) {
             $scope.titles = data;
         })
-        $scope.setActive = function(titles) {
-            $scope.activeMenu = titles;
-        }
         $scope.active = function() {
             return $scope.titles.filter(function(titles){
                 return titles.active;

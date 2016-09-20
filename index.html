@@ -13,14 +13,11 @@
 <body ng-controller="TitlesCtrl">
 <div class="menu">
     <tabs>
-        <pane ng-repeat="ProductTitle in titles" heading="{{ProductTitle.title}}" active="ProductTitle.active" ng-class="{active : activeMenu === ProductTitle}" ng-click="setActive(ProductTitle)">
-            {{ProductTitle.title}}
+        <pane ng-repeat="ProductTitle in titles" heading="{{ProductTitle.title}}" active="ProductTitle.active">
+            <img ng-src="http://smktesting.herokuapp.com/static/{{ProductTitle.img}}">
+            {{ProductTitle.text}}
         </pane>
     </tabs>
 </div>
-<div ng-repeat="ProductTitle in titles">
-    {{ProductTitle.title}}
-</div>
 </body>
-
 </html>
