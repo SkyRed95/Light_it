@@ -3,15 +3,12 @@ $(document).ready(function () {
     var app = angular.module("MyApp", []);
     app.controller("TitlesCtrl", function($scope, $http) {
         $http.get(productsAPI).
-        success(function(data, title) {
+        success(function(data) {
             $scope.titles = data;
+            $scope.activeMenu = $scope.titles[0];
+            $scope.setActive = function(titles) {
+                $scope.activeMenu = titles
+            }
         })
     });
-
-    app.controller('navCtrl', ['$scope', '$location', function ($scope, $location) {
-        $scope.navClass = function (page) {
-            var currentRoute = $location.path().substring(1);
-            return page === currentRoute ? 'active' : '';
-        };
-    }]);
 });

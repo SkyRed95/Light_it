@@ -8,11 +8,11 @@
     <script src="js/products.js"></script>
     <script src="js/frameworks/angular.js"></script>
 </head>
-<body>
-<div class="menu" ng-controller="TitlesCtrl">
-    <ul class="nav nav-list" ng-controller="navCtrl">
-        <li ng-class="navClass('{{ProductTitle.title}}')" ng-repeat="ProductTitle in titles"><a href='#/{{ProductTitle.title}}'>
-            {{ProductTitle.title}}</a>
+<body ng-controller="TitlesCtrl">
+<div class="menu">
+    <ul>
+        <li  ng-repeat="ProductTitle in titles" ng-class="{active : activeMenu === ProductTitle}" ng-click="setActive(ProductTitle)">
+            {{ProductTitle.title}}
         </li>
     </ul>
 </div>

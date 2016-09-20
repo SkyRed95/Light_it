@@ -10,10 +10,7 @@ ul {
 }
 
 li {
-    padding: 10px;
-}
-
-a {
+    cursor: pointer;
     color: darkgrey;
     text-decoration: none;
     font-size: 20px;
@@ -23,14 +20,19 @@ a {
     -moz-transition-duration: 1s;
     transition-duration: 1s;
 }
-a:hover {
+
+li:hover {
     color: white;
-    padding-left: 0px;
-    padding-right: 20px;
 }
 
 .menu {
     display: inline-block;
     height: 100%;
     background-color: black;
+    float: left;
+}
+
+.active {
+    padding-left: 0px;
+    padding-right: 20px;
 }
