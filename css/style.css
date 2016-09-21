@@ -10,7 +10,9 @@ ul {
 }
 
 li,
-a {
+a,
+a:focus,
+a:hover {
     cursor: pointer;
     color: darkgrey;
     text-decoration: none;

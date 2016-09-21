@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Light IT</title>
+    <link rel="stylesheet" type="text/css" href="css/librerys/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/librerys/jquery-3.1.0.js"></script>
     <script src="js/products.js"></script>
@@ -12,9 +13,10 @@
 <body ng-controller="TitlesCtrl">
 <div class="menu">
     <tabs>
-        <pane ng-repeat="ProductTitle in titles" heading="{{ProductTitle.title}}" active="ProductTitle.active">
+        <pane class="container" ng-repeat="ProductTitle in titles" heading="{{ProductTitle.title}}" active="ProductTitle.active">
+            <div>{{ProductTitle.title}}</div>
             <img ng-src="http://smktesting.herokuapp.com/static/{{ProductTitle.img}}">
-            {{ProductTitle.text}}
+            <div>{{ProductTitle.text}}</div>
         </pane>
     </tabs>
 </div>
