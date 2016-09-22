@@ -8,31 +8,52 @@
     <script src="js/librerys/jquery-3.1.0.js"></script>
     <script src="js/products.js"></script>
     <script src="js/frameworks/angular.js"></script>
-    <script src="http://angular-ui.github.com/bootstrap/ui-bootstrap-tpls-0.2.0.js"></script>
+    <script src="js/librerys/ui-bootstrap-tpls-0.2.0.js"></script>
 </head>
 <body ng-controller="TitlesCtrl">
-<div class="menu">
-    <tabs>
-        <pane class="container" ng-repeat="ProductTitle in titles" heading="{{ProductTitle.title}}"
-              active="ProductTitle.active" ng-click="id(ProductTitle.id)">
-            <div class="product col-xs-6">
-                <div class="title">{{ProductTitle.title}}</div>
-                <img ng-src="http://smktesting.herokuapp.com/static/{{ProductTitle.img}}">
-                <div class="text_product">{{ProductTitle.text}}</div>
+<!--<div class="menu">-->
+    <!--<div class="tabbable ng-isolate-scope">-->
+        <!--<ul class="nav nav-tabs">-->
+            <!--<li ng-repeat="ProductTitle in titles" ng-class="{active:ProductTitle.selected}">-->
+                <!--<a href="" ng-click="select(ProductTitle)">{{ProductTitle.title}}</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--<div class="tab-content" ng-transclude>-->
+        <!--<div class="container tab-pane ng-scope ng-isolate-scope ng-hide" ng-class="{active: selected}"-->
+             <!--ng-show="selected" ng-transclude=""-->
+             <!--ng-repeat="ProductTitle in titles" heading="{{ProductTitle.title}}"-->
+             <!--active="ProductTitle.active" ng-click=id(ProductTitle.id)>-->
+            <!--<div class="product col-xs-6 ng-scope">-->
+                <!--<div class="title">{{ProductTitle.title}}</div>-->
+                <!--<img ng-src="http://smktesting.herokuapp.com/static/{{ProductTitle.img}}">-->
+                <!--<div class="text_product">{{ProductTitle.text}}</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<tabs>
+    <pane class="container" ng-repeat="ProductTitle in titles" heading="{{ProductTitle.title}}"
+          active="ProductTitle.active">
+        <div class="product col-xs-6">
+            <div class="title">{{ProductTitle.title}}</div>
+            <img ng-src="http://smktesting.herokuapp.com/static/{{ProductTitle.img}}">
+            <div class="text_product">{{ProductTitle.text}}</div>
+        </div>
+
+        <button ng-click="id(ProductTitle.id)">Send request</button>
+
+        <div class="col-xs-6 reviews">
+            <div ng-repeat="ProductReview in reviews">
+                <div class="rate">{{ProductReview.rate}}</div>
+                <div class="username">{{ProductReview.created_by.username}}</div>
+                <div class="text_rewiew">{{ProductReview.text}}</div>
             </div>
-
-            <button ng-click=id(ProductTitle.id)>Send request</button>
-
-            <div class="col-xs-6 reviews">
-                <div ng-repeat="ProductReview in reviews">
-                    <div class="rate">{{ProductReview.rate}}</div>
-                    <div class="username">{{ProductReview.created_by.username}}</div>
-                    <div class="text_rewiew">{{ProductReview.text}}</div>
-                </div>
-            </div>
-        </pane>
-    </tabs>
-
+        </div>
+    </pane>
+</tabs>
 </div>
 </body>
 </html>
