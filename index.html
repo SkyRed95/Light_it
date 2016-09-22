@@ -13,12 +13,26 @@
 <body ng-controller="TitlesCtrl">
 <div class="menu">
     <tabs>
-        <pane class="container" ng-repeat="ProductTitle in titles" heading="{{ProductTitle.title}}" active="ProductTitle.active">
-            <div>{{ProductTitle.title}}</div>
-            <img ng-src="http://smktesting.herokuapp.com/static/{{ProductTitle.img}}">
-            <div>{{ProductTitle.text}}</div>
+        <pane class="container" ng-repeat="ProductTitle in titles" heading="{{ProductTitle.title}}"
+              active="ProductTitle.active" ng-click="id(ProductTitle.id)">
+            <div class="product col-xs-6">
+                <div class="title">{{ProductTitle.title}}</div>
+                <img ng-src="http://smktesting.herokuapp.com/static/{{ProductTitle.img}}">
+                <div class="text_product">{{ProductTitle.text}}</div>
+            </div>
+
+            <button ng-click=id(ProductTitle.id)>Send request</button>
+
+            <div class="col-xs-6 reviews">
+                <div ng-repeat="ProductReview in reviews">
+                    <div class="rate">{{ProductReview.rate}}</div>
+                    <div class="username">{{ProductReview.created_by.username}}</div>
+                    <div class="text_rewiew">{{ProductReview.text}}</div>
+                </div>
+            </div>
         </pane>
     </tabs>
+
 </div>
 </body>
 </html>

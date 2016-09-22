@@ -16,7 +16,6 @@ a:hover {
     cursor: pointer;
     color: darkgrey;
     text-decoration: none;
-    font-size: 20px;
     padding: 10px;
     -webkit-transition-duration: 1s;
     -o-transition-duration: 1s;
@@ -24,8 +23,13 @@ a:hover {
     transition-duration: 1s;
 }
 
-.nav,
-a {
+a,
+.product {
+    font-size: 20px;
+}
+
+a,
+.nav {
     background-color: black;
     display: -webkit-box;
     margin-top: 0px;
@@ -35,4 +39,20 @@ a {
     padding-top: 20px;
     padding-bottom: 00px;
     color: white;
+}
+
+.product {
+    display: inline-block;
+}
+
+.title {
+    padding-bottom: 20px;
+    border-bottom: 2px darkgray solid;
+    margin-bottom: 20px;
+}
+
+.text_product {
+    padding-top: 20px;
+    border-top: 2px darkgray solid;
+    margin-top: 20px;
 }

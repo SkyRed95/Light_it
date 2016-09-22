@@ -6,10 +6,16 @@ $(document).ready(function () {
         success(function(data) {
             $scope.titles = data;
         })
-        $scope.active = function() {
-            return $scope.titles.filter(function(titles){
-                return titles.active;
-            });
-        };
+        // $scope.active = function() {
+        //     return $scope.titles.filter(function(titles){
+        //         return titles.active;
+        //     });
+        // };
+        $scope.id = function(idProduct) {
+            var reviewsAPI = "http://smktesting.herokuapp.com/api/reviews/" + idProduct;
+            $http.get(reviewsAPI).success(function (data) {
+                $scope.reviews = data;
+            })
+        }
     });
 });
