@@ -1,12 +1,14 @@
-html,
 body {
-    height: 100%;
     background-color: beige;
-    margin: 0px;
 }
 
 ul {
     list-style-type: none;
+    display:table;
+}
+
+label {
+    color: darkgrey;
 }
 
 li,
@@ -28,11 +30,11 @@ a,
     font-size: 20px;
 }
 
-a,
-.nav {
+.nav,
+.nav a {
     background-color: black;
     display: -webkit-box;
-    margin-top: 0px;
+    margin: 0px;
 }
 
 .active a {
@@ -55,4 +57,37 @@ a,
     padding-top: 20px;
     border-top: 2px darkgray solid;
     margin-top: 20px;
+}
+
+.sign a {
+    color: white;
+    border-left: 1px darkgray solid;
+}
+
+.nav li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.form_auth {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.form_auth div {
+    border: 1px black solid;
+    border-radius: 7px;
+    background-color: black;
+    padding: 5px;
+}
+
+.form_auth input {
+    margin-bottom: 5px;
 }
