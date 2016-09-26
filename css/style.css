@@ -2,13 +2,10 @@ body {
     background-color: beige;
 }
 
+/*Navigation*/
 ul {
     list-style-type: none;
     display:table;
-}
-
-label {
-    color: darkgrey;
 }
 
 li,
@@ -25,26 +22,33 @@ a:hover {
     transition-duration: 1s;
 }
 
-a,
-.product {
-    font-size: 20px;
-}
-
 .nav,
 .nav a {
     background-color: black;
     display: -webkit-box;
     margin: 0px;
+    font-size: 20px;
+}
+
+.nav li {
+    display: inline-block;
+    vertical-align: top;
 }
 
 .active a {
     padding-top: 20px;
-    padding-bottom: 00px;
+    padding-bottom: 0px;
     color: white;
 }
 
+.sign a {
+    color: white;
+    border-left: 1px darkgray solid;
+}
+
+/*Content*/
 .product {
-    display: inline-block;
+    font-size: 20px;
 }
 
 .title {
@@ -59,14 +63,10 @@ a,
     margin-top: 20px;
 }
 
-.sign a {
-    color: white;
-    border-left: 1px darkgray solid;
-}
+/*Form auth*/
 
-.nav li {
-    display: inline-block;
-    vertical-align: top;
+label {
+    color: darkgrey;
 }
 
 .form_auth {
@@ -90,4 +90,10 @@ a,
 
 .form_auth input {
     margin-bottom: 5px;
+}
+
+.message {
+    text-align: center;
+    color: darkgrey;
+    font-weight: bold;
 }

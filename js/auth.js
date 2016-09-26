@@ -9,7 +9,12 @@ $(document).ready(function () {
             });
             var regAPI = "http://smktesting.herokuapp.com/api/register/";
             $http.post(regAPI, data)
-            $scope.authorization()
+                .success(function (data) {
+                    $scope.answer = data;
+                    if (data.success == "false") {
+                        $scope.authorization()
+                    }
+                })
         }
         $scope.authorization = function () {
             var data = $.param({
@@ -18,6 +23,9 @@ $(document).ready(function () {
             });
             var authAPI = "http://smktesting.herokuapp.com/api/login/";
             $http.post(authAPI, data)
+                .success(function (data) {
+                    $scope.answer = data;
+                })
         }
     });
 });
