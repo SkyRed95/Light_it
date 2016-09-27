@@ -3,36 +3,31 @@ body {
 }
 
 /*Navigation*/
-ul {
-    list-style-type: none;
-    display:table;
-}
-
-li,
-a,
-a:focus,
-a:hover {
-    cursor: pointer;
-    color: darkgrey;
-    text-decoration: none;
-    padding: 10px;
-    -webkit-transition-duration: 1s;
-    -o-transition-duration: 1s;
-    -moz-transition-duration: 1s;
-    transition-duration: 1s;
-}
-
-.nav,
-.nav a {
-    background-color: black;
+.menu {
     display: -webkit-box;
+    background-color: black;
+}
+
+.menu ul,
+.menu a {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: top;
     margin: 0px;
     font-size: 20px;
 }
 
-.nav li {
-    display: inline-block;
-    vertical-align: top;
+li,
+a,
+a:hover {
+    cursor: pointer;
+    color: darkgrey;
+    text-decoration: none;
+    padding: 10px 0px;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    transition-duration: 1s;
 }
 
 .active a {
@@ -47,7 +42,8 @@ a:hover {
 }
 
 /*Content*/
-.product {
+.product,
+.reviews {
     font-size: 20px;
 }
 

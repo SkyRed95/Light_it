@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="MyApp">
+<html ng-app="ProdApp">
 <head>
     <meta charset="UTF-8">
     <title>Light IT</title>
@@ -8,22 +8,28 @@
     <script src="js/librerys/jquery-3.1.0.js"></script>
     <script src="js/products.js"></script>
     <script src="js/frameworks/angular.js"></script>
-    <script src="js/librerys/ui-bootstrap-tpls-0.2.0.js"></script>
 </head>
 <body>
 <div ng-controller="TitlesCtrl">
-    <tabs>
-        <pane class="container" ng-repeat="ProductTitle in titles" heading="{{ProductTitle.title}}"
-              active="ProductTitle.active">
-            <div class="product col-xs-6">
+    <div class="products">
+        <div class="menu">
+            <ul ng-repeat="ProductTitle in titles">
+                <li ng-class="{active : activeMenu === ProductTitle}">
+                    <a ng-click="setActive(ProductTitle); id(ProductTitle.id)">{{ProductTitle.title}}</a>
+                </li>
+            </ul>
+            <ul class="sign">
+                <li>
+                    <a href="login_form.html">Sign</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container" ng-repeat="ProductTitle in titles" ng-show="activeMenu === ProductTitle">
+            <div class="col-xs-6 product">
                 <div class="title">{{ProductTitle.title}}</div>
                 <img ng-src="http://smktesting.herokuapp.com/static/{{ProductTitle.img}}">
                 <div class="text_product">{{ProductTitle.text}}</div>
             </div>
-
-
-            <p class="col-xs-6" ng-click="id(ProductTitle.id)">Reviews</p>
-
             <div class="col-xs-6 reviews">
                 <div ng-repeat="ProductReview in reviews">
                     <div class="rate">{{ProductReview.rate}}</div>
@@ -31,8 +37,8 @@
                     <div class="text_rewiew">{{ProductReview.text}}</div>
                 </div>
             </div>
-        </pane>
-    </tabs>
+        </div>
+    </div>
 </div>
 </body>
 </html>
