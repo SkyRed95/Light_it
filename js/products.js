@@ -15,5 +15,4 @@ $(document).ready(function () {
             $scope.activeMenu = titles
         }
     });
-
 });

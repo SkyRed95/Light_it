@@ -59,8 +59,23 @@ a:hover {
     margin-top: 20px;
 }
 
-/*Form auth*/
+.rate {
+    float: right;
+}
 
+.review {
+    padding: 10px 0px;
+    border-bottom: 2px black solid;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+.text_rewiew {
+    border-left: 2px darkgrey solid;
+    padding-left: 10px;
+}
+
+/*Form auth*/
 label {
     color: darkgrey;
 }
