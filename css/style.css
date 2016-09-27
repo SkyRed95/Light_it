@@ -48,13 +48,13 @@ a:hover {
 }
 
 .title {
-    padding-bottom: 20px;
+    padding: 10px 0px;
     border-bottom: 2px darkgray solid;
     margin-bottom: 20px;
 }
 
 .text_product {
-    padding-top: 20px;
+    padding-top: 10px;
     border-top: 2px darkgray solid;
     margin-top: 20px;
 }
@@ -65,27 +65,50 @@ label {
     color: darkgrey;
 }
 
-.form_auth {
-    width: 100%;
-    height: 100%;
+.modalDialog {
     position: fixed;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: auto;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    display: none;
 }
 
-.form_auth div {
-    border: 1px black solid;
-    border-radius: 7px;
+.modalDialog:target {
+    display: block;
+    pointer-events: auto;
+}
+
+.modalDialog div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px;
+    border-radius: 10px;
     background-color: black;
-    padding: 5px;
 }
 
-.form_auth input {
+.modalDialog input {
     margin-bottom: 5px;
+}
+
+.close {
+    background: black;
+    color: white;
+    line-height: 4px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+    background-color: #333333;
 }
 
 .message {

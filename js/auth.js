@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    var app2 = angular.module("AuthApp", []);
-    app2.controller("AuthCtrl", function ($scope, $http) {
+    var app = angular.module("AuthApp", []);
+    app.controller("AuthCtrl", function ($scope, $http) {
         $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
         $scope.register = function () {
             var data = $.param({

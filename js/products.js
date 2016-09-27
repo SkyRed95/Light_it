@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var productsAPI = "http://smktesting.herokuapp.com/api/products/?format=json";
-    var app = angular.module("ProdApp", []);
+    var app = angular.module("ProdApp", ["AuthApp"]);
     app.controller("TitlesCtrl", function ($scope, $http) {
         $http.get(productsAPI).success(function (data) {
             $scope.titles = data;
@@ -15,4 +15,5 @@ $(document).ready(function () {
             $scope.activeMenu = titles
         }
     });
+
 });
