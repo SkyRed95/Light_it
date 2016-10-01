@@ -5,10 +5,12 @@
     <title>Light IT</title>
     <link rel="stylesheet" type="text/css" href="css/librerys/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins/ng-rateit.css">
     <script src="js/librerys/jquery-3.1.0.js"></script>
     <script src="js/products.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/frameworks/angular.js"></script>
+    <script src="js/plugins/ng-rateit.js"></script>
 </head>
 <body>
 <div ng-app="ProdApp">
@@ -32,6 +34,10 @@
                 <div class="text_product">{{ProductTitle.text}}</div>
             </div>
             <div class="col-xs-6 reviews">
+                <ng-rate-it ng-model="model.custom" class="custom"></ng-rate-it>
+                <textarea name="comment" rows="3"></textarea>
+                <button type="submit">Send review</button>
+                <h2>Reviews</h2>
                 <div class="review" ng-repeat="ProductReview in reviews">
                     <div class="rate">Rate: {{ProductReview.rate}}</div>
                     <div class="username">User: {{ProductReview.created_by.username}}</div>
@@ -57,20 +63,5 @@
 </div>
 
 </div>
-
-<!--<div ng-app="AuthApp" class="modalDialog" id="form_auth">-->
-<!--<div ng-controller="AuthCtrl">-->
-<!--<a href="#close" title="Закрыть" class="close">X</a>-->
-<!--<label for="exampleInputLogin">Username</label>-->
-<!--<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username" name="username"-->
-<!--ng-model="username" required>-->
-<!--<label for="exampleInputPassword">Password</label>-->
-<!--<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password"-->
-<!--name="password" ng-model="password" required>-->
-<!--<button class="btn btn-default login" ng-click="authorization()">Username</button>-->
-<!--<button class="btn btn-link register" ng-click="register()">Register</button>-->
-<!--<p class="message ng-binding">{{answer.message}}</p>-->
-<!--</div>-->
-<!--</div>-->
 </body>
 </html>

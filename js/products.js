@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var productsAPI = "http://smktesting.herokuapp.com/api/products/?format=json";
-    var app = angular.module("ProdApp", ["AuthApp"]);
+    var app = angular.module("ProdApp", ["AuthApp",'ngRateIt']);
     app.controller("TitlesCtrl", function ($scope, $http) {
         $http.get(productsAPI).success(function (data) {
             $scope.titles = data;

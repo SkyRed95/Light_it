@@ -2,19 +2,22 @@ body {
     background-color: beige;
 }
 
-/*Navigation*/
-.menu {
-    display: -webkit-box;
-    background-color: black;
+h2 {
+    color: black;
 }
 
-.menu ul,
-.menu a {
-    list-style-type: none;
-    display: inline-block;
-    vertical-align: top;
-    margin: 0px;
-    font-size: 20px;
+textarea {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    color: white;
+    background-color: black;
+    border-color: black;
+    border-radius: 10px;
 }
 
 li,
@@ -28,6 +31,28 @@ a:hover {
     -o-transition-duration: 1s;
     -moz-transition-duration: 1s;
     transition-duration: 1s;
+}
+
+label {
+    color: darkgrey;
+}
+
+textarea {
+    margin-top: 10px;
+}
+
+/*Navigation*/
+.menu {
+    background-color: black;
+}
+
+.menu ul,
+.menu a {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px;
+    font-size: 20px;
 }
 
 .active a {
@@ -59,6 +84,10 @@ a:hover {
     margin-top: 20px;
 }
 
+#origin {
+    margin-top: 16px;
+}
+
 .rate {
     float: right;
 }
@@ -66,7 +95,7 @@ a:hover {
 .review {
     padding: 10px 0px;
     border-bottom: 2px black solid;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     word-wrap: break-word;
 }
 
@@ -76,9 +105,6 @@ a:hover {
 }
 
 /*Form auth*/
-label {
-    color: darkgrey;
-}
 
 .modalDialog {
     position: fixed;
