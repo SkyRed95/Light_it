@@ -1,7 +1,6 @@
 $(document).ready(function () {
     var app = angular.module("AuthApp", []);
     app.controller("AuthCtrl", function ($scope, $http) {
-        //$http.defaults.headers.common['Authorization'] = 'Token 416ec944e5095e3640ee55561fdf18eab9dbca87';
         $scope.register = function () {
             var data = $.param({
                 username: $scope.username,
@@ -24,7 +23,7 @@ $(document).ready(function () {
             var authAPI = "http://smktesting.herokuapp.com/api/login/";
             $http.post(authAPI, data)
                 .success(function (data) {
-                    $scope.answer = data;
+                    $http.defaults.headers.common['Authorization'] = 'Token ' + data.token;
                 })
         }
     });
