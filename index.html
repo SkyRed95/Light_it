@@ -35,8 +35,8 @@
             </div>
             <div class="col-xs-6 reviews">
                 <ng-rate-it ng-model="model.custom" class="custom"></ng-rate-it>
-                <textarea name="comment" rows="3"></textarea>
-                <button type="submit">Send review</button>
+                <textarea name="comment" rows="3" ng-model="text"></textarea>
+                <button type="submit" ng-click="postReview(ProductTitle.id, text, model.custom)">Send review</button>
                 <h2>Reviews</h2>
                 <div class="review" ng-repeat="ProductReview in reviews">
                     <div class="rate">Rate: {{ProductReview.rate}}</div>
