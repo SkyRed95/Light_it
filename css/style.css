@@ -22,7 +22,7 @@ button {
 
 li,
 a,
-a:hover {
+a:hover{
     cursor: pointer;
     color: darkgrey;
     text-decoration: none;
@@ -34,7 +34,7 @@ a:hover {
 }
 
 label {
-    color: darkgrey;
+    color: black;
 }
 
 textarea {
@@ -107,50 +107,22 @@ textarea {
 
 /*Form auth*/
 
-.modalDialog {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    display: none;
+.modal-content {
+    background-color: darkgrey;
 }
 
-.modalDialog:target {
-    display: block;
-    pointer-events: auto;
-}
-
-.modalDialog div {
-    width: 400px;
-    position: relative;
+.modal-dialog {
     margin: 10% auto;
-    padding: 5px 20px;
-    border-radius: 10px;
-    background-color: black;
 }
 
-.modalDialog input {
+.modal-dialog input {
     margin-bottom: 5px;
+    border-radius: 2px;
+    border-color: darkgrey;
 }
 
 .close {
-    background: black;
-    color: white;
-    line-height: 4px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    border-radius: 12px;
-    box-shadow: 1px 1px 3px #000;
-}
-
-.close:hover {
-    background-color: #333333;
+    float: right;
 }
 
 .message {
