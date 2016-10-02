@@ -82,6 +82,7 @@ textarea {
     padding-top: 10px;
     border-top: 2px darkgray solid;
     margin-top: 20px;
+    word-wrap: break-word;
 }
 
 #origin {
