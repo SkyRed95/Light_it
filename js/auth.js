@@ -21,9 +21,6 @@ $(document).ready(function () {
             var authAPI = "http://smktesting.herokuapp.com/api/login/";
             $http.post(authAPI, data)
                 .success(function (data) {
-                    // if (data.success !== !"true") {
-                    //     window.location.assign('/#close')
-                    // }
                     $http.defaults.headers.common['Authorization'] = 'Token ' + data.token;
                     $scope.answer = data;
                 })
