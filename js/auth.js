@@ -1,6 +1,5 @@
-$(document).ready(function () {
-    var app = angular.module("AuthApp", []);
-    app.controller("AuthCtrl", function ($scope, $http) {
+angular.module("AuthApp", [])
+    .controller("AuthCtrl", function ($scope, $http) {
         $scope.register = function () {
             var data = $.param({
                 username: $scope.username,
@@ -9,7 +8,7 @@ $(document).ready(function () {
             var regAPI = "http://smktesting.herokuapp.com/api/register/";
             $http.post(regAPI, data)
                 .success(function (data) {
-                    $http.defaults.headers.common['Authorization'] = 'Token ' + data.token;
+                    $http.defaults.headers.common.Authorization = 'Token ' + data.token;
                     $scope.answer = data;
                 })
         }
@@ -21,9 +20,8 @@ $(document).ready(function () {
             var authAPI = "http://smktesting.herokuapp.com/api/login/";
             $http.post(authAPI, data)
                 .success(function (data) {
-                    $http.defaults.headers.common['Authorization'] = 'Token ' + data.token;
+                    $http.defaults.headers.common.Authorization = 'Token ' + data.token;
                     $scope.answer = data;
                 })
         }
     });
-});
