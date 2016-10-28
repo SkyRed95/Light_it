@@ -5,7 +5,7 @@ angular.module("AuthApp", [])
                 username: $scope.username,
                 password: $scope.password
             });
-            var regAPI = "http://smktesting.herokuapp.com/api/register/";
+            var regAPI = "//smktesting.herokuapp.com/api/register/";
             $http.post(regAPI, data)
                 .success(function (data) {
                     $http.defaults.headers.common.Authorization = 'Token ' + data.token;
@@ -17,7 +17,7 @@ angular.module("AuthApp", [])
                 username: $scope.username,
                 password: $scope.password
             });
-            var authAPI = "http://smktesting.herokuapp.com/api/login/";
+            var authAPI = "//smktesting.herokuapp.com/api/login/";
             $http.post(authAPI, data)
                 .success(function (data) {
                     $http.defaults.headers.common.Authorization = 'Token ' + data.token;
